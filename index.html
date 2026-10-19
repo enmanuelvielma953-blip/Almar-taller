@@ -539,22 +539,45 @@
 
         @media (max-width: 800px) {
             .item-dashboard {
-                grid-template-columns:
-                    minmax(0, 1.5fr)
-                    minmax(170px, .9fr)
-                    minmax(130px, .65fr)
-                    220px;
-                gap: 10px;
+                grid-template-columns: minmax(0, 1fr);
+                gap: 12px;
                 align-items: start;
             }
 
+            .item-dashboard > div {
+                min-width: 0;
+                width: 100%;
+            }
+
             .item-dashboard .btns {
+                display: grid;
                 grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 8px;
+                width: 100%;
             }
 
             .item-dashboard .btns button {
+                width: 100%;
+                min-width: 0;
                 font-size: 12px;
                 padding: 10px 6px;
+                white-space: normal;
+            }
+
+            .item-dashboard .order-images {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                width: 100%;
+            }
+
+            .item-dashboard .order-image-thumb {
+                width: 100%;
+                height: auto;
+                aspect-ratio: 4 / 3;
+                margin: 0;
+            }
+
+            .item-dashboard .order-status-select {
+                max-width: 100%;
             }
         }
 
